@@ -900,17 +900,19 @@ section#team {
 }
 
 .team-member img {
-    position: absolute;
-    margin: 0 auto;
+    position: relative;
+    margin: 10 10;
     float: left;
     left: 11%;
+    width: 300;
+    height: 300px;
 }
 @media (max-width:450px) {
 .carousel-indicators {
     bottom: 0px;
 }
 .team-member img {
-    width: 100%;
+    width: 300px;
 }
 .team-member-name {
     font-size: 25px;

@@ -1,0 +1,175 @@
+@media screen{
+
+body html{
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px 45px auto auto 100px;
+    grid-template-areas: 
+    "i1 i1 i1 i1 i1"
+    "i2 i2 i2 i2 i2"
+    "i3 i4 i4 i4 i4"
+    "i3 i4 i4 i4 i4"
+    "i3 i5 i5 i5 i5";
+}
+
+.header {
+    grid-area: i1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 118, 238);
+}
+
+.header .titre, .header p {
+    color:white;
+}
+
+.nav {
+    grid-area: i2;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Lien1 {
+    color:white;
+}
+
+.Lien2 {
+    color:white;
+}
+
+.Lien3 {
+    color:white;
+}
+
+.Lien4 {
+    color:white;
+}
+
+.Lien5 {
+    color:white;
+    flex-grow: 4;
+}
+
+.aside {
+    grid-area: i3;
+    background-color: rgb(214, 210, 210);
+    padding: 5px;
+}
+
+
+.article {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-area: i4;
+    background-color: white;
+    padding: 25px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.footer { 
+    height: 100px;
+    width :100%;
+    background-color: rgb(170, 169, 169);  
+}
+
+span {
+    margin-left: 2em;
+}
+
+.nav a {
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+    display : inline-block;
+}
+
+}
+
+@media (max-width: 600px)  {
+    
+    #container {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "i2"
+        "i2"
+        "i2"
+        "i3"
+        "i4";
+    }
+
+    .header {
+        grid-area: i1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(26, 118, 238);
+        position:sticky;
+        top: 0;
+        height: 225px;
+        width: 600px;
+    }
+
+    .nav {
+        grid-area: i2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position:sticky;
+        top: 225px;
+        height: 160px;
+        width: 600px;
+    }
+
+    .aside {
+        grid-area: i3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        grid-area: i4;
+        display: none;
+    }
+}
+
+@media print {
+
+    .nav{
+        display: none;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+}
