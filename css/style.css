@@ -678,6 +678,7 @@ section#services {
 
 }
 
+
 section#services .section-subheading {
     color: #fff !important;
 }
@@ -729,12 +730,18 @@ section h3.section-subheading {
     transition: all 0.2s;
 }
 
+
 .fa:before {
     color: #fff;
 }
 
-.service i.fa:hover {
+.service i.fa:hover  {
     box-shadow: 0px 0px 6px #fff;
+    transform: scale(1.2);
+}
+
+.service-heading:hover, .text-services:hover {
+    transform: scale(1.2);
 }
 
 @media (min-width:768px) {
@@ -906,7 +913,14 @@ section#team {
     left: 11%;
     width: 300;
     height: 300px;
+    transition: all 500ms;
+    transform-origin: 31% 38%;
 }
+
+.team-member img:hover {
+    transform:scale(8);
+}
+
 @media (max-width:450px) {
 .carousel-indicators {
     bottom: 0px;
